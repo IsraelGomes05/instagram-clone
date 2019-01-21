@@ -1,3 +1,4 @@
-<p>
-  banner works!
-</p>
+<div class="banner-background">
+  <img *ngFor="let img of imagens"
+       [src]="img.url" [@banner]="img.estado">
+</div>
