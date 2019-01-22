@@ -21,11 +21,11 @@ import {Imagem} from './imagem.model';
 export class BannerComponent implements OnInit {
 
   public imagens: Array<Imagem> = [
-    {estado: 'escondido', url: '/assets/banner-acesso/img_1.png'},
-    {estado: 'escondido', url: '/assets/banner-acesso/img_2.png'},
-    {estado: 'escondido', url: '/assets/banner-acesso/img_3.png'},
-    {estado: 'escondido', url: '/assets/banner-acesso/img_4.png'},
-    {estado: 'escondido', url: '/assets/banner-acesso/img_5.png'}
+    {estado: 'visivel', url: '/assets/imagens/img_1.png'},
+    {estado: 'escondido', url: '/assets/imagens/img_2.png'},
+    {estado: 'escondido', url: '/assets/imagens/img_3.png'},
+    {estado: 'escondido', url: '/assets/imagens/img_4.png'},
+    {estado: 'escondido', url: '/assets/imagens/img_5.png'}
   ];
 
   constructor() {
@@ -37,7 +37,6 @@ export class BannerComponent implements OnInit {
 
   private logicaRotacao(): void {
     let idx: number;
-
     for (let i = 0; i <= 4; i++) {
       if (this.imagens[i].estado === 'visivel') {
         this.imagens[i].estado = 'escondido';
